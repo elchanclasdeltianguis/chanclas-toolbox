@@ -1,6 +1,6 @@
 import axios from "axios"
 
-export async function messageAdmin(message: string) {
+export async function sendEnvBotTGMessage(message: string) {
   if (process.env.TG_CHAT_ID && process.env.TG_BOT_ID)
     sendTGMessage(process.env.TG_CHAT_ID, process.env.TG_BOT_ID, message)
 }
