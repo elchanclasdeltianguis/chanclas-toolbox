@@ -10,12 +10,11 @@ export async function sendTGMessage(
   telegram_bot_id: string,
   message: string
 ) {
-  const response = await axios.post(
+  await axios.post(
     `https://api.telegram.org/bot${telegram_bot_id}/sendMessage`,
     {
       chat_id: chat_id,
       text: message,
     }
   )
-  console.log(await response)
 }
